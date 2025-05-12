@@ -2,76 +2,93 @@
 
 Exp.No:5(a)	Constructors- Parameterized Constructor
 ### AIM
-To write a Python code to create a Class for a Person with the parameterised constructor which will take the name and userid of the person as parameters print the userid  of the person,
+To write a Python code to implement a constructor for class Student which takes name and rollno as parameters and prints them.
 ### ALGORITHM
 
-Step 1:	 Begin the program.
 
-Step 2:	 Define the person class.
+Step 1: Begin the program.
 
-Step 3:	 The class person has an __init__ method, which is the constructor. It accepts two parameters: name and userid. 
+Step 2: Define the class Student.
 
-Step 4:	Inside the __init__ method: Assign the name to self.name. Assign the userid to self.userid.
+Step 3: Inside the class, define the __init__ method with parameters name and rollno.
 
-Step 5:	 Print the self.userid.
+Step 4: Assign the parameters to instance variables self.name and self.rollno.
 
-Step 6:	 Prompt the user to enter the name (string) and id.
+Step 5: Print the name and rollno using self.name and self.rollno.
 
-Step 7:	 Create an instance s1 of the person class by passing the entered name and userid to the constructor.
+Step 6: Prompt the user to enter the student's name and roll number.
 
-Step 8:	 Terminate the program.
+Step 7: Create an instance of the Student class using the entered values.
+
+Step 8: End the program.
 ### PROGRAM
 ```
-class person:
-    def __init__(self,name,userid):
-        self.name=name
-        self.userid=userid
-        print(self.userid)
-name=input()
-userid=input()
-s1=person(name,userid)
+class student:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    def display(self):
+        print("Name: ",self.a)
+        print("Roll no.: ",self.b)
+a=input()
+b=int(input())
+obj=student(a,b)
+obj.display()
 ```
 ### OUTPUT
- ![image](https://github.com/user-attachments/assets/95ebab44-d7da-435c-b994-e752ebeabd44)
+![image](https://github.com/user-attachments/assets/53d4a61b-e2e6-484b-a53b-c3f154f53316)
 
 ### RESULT
-Thus the python program for parameterised constructor which will take the name and userid of the person as parameters print the userid  of the person, was implemented and executed successfully.
+Thus, the Python program to implement a constructor for the Student class by passing the name and roll number as arguments was implemented and executed successfully.
 
 Exp.No:5(b)	Destructor
 
 ### AIM
-To create  a  Python Class Student with a destructor.
+To write a Python program to create a class with a destructor, demonstrating object creation and deletion.
+
+
 ### ALGORITHM
-Step 1:	 Begin the program.
+Step 1: Begin the program.
 
 Step 2:	 Define the student class:
 
 Step 3:	 Inside the class student, define the __init__ method (constructor) and the __del__ method (destructor).
 
-Step 4:	 Create an object s2 of the student class. When the object s2 is created, the __init__ method is called, and its print statements are executed.
+Step 4:	 reate an object c1 of the Car class. The constructor is automatically invoked.
 
-Step 5:	 Use the del statement to delete the object s2. This triggers the __del__ method (destructor), and the respective print statements are executed.
+Step 5:	Use the del statement to delete the object c1. This triggers the destructor.
 
-Step 6:	  Terminate the program.
+Step 6:	 End the program.
 
 ### PROGRAM
 ```
-class student:
+class Car:
     def __init__(self):
-        print("Inside Constructor")
-        print("Object initialized")
-        print("Hello, my name is Emma")
+        print("Building the Car")
+        self.name = "Lamborghini"
+        self.max_speed = "220 mph"
+        
+    def display(self):
+        print(f"Name: {self.name}")
+        print(f"Max Speed: {self.max_speed}")
+        
     def __del__(self):
-        print("Inside destructor")
-        print("Object destroyed")
-s2=student()
-del s2
+        print("Destroying the Car")
+        
+#creating object of the class
+myCar = Car()
+
+#calling the display function of the myCar object
+myCar.display()
+
+#manually deleting the object using the del keyword
 ```
 ### OUTPUT
- ![image](https://github.com/user-attachments/assets/bff64e83-c99e-4102-ab1d-ec15d0c3fae4)
+![image](https://github.com/user-attachments/assets/c2aacf6a-57a5-4b19-8871-5009d03fec74)
+
 
 ### RESULT
-Thus the python program for Class Student with a destructor, was implemented and executed successfully.
+Thus, the Python program to implement a destructor using the __del__() method was successfully written, executed, and demonstrated object destruction upon deletion.
 
 Exp.No:5(c)	Multiple Inheritance
 
